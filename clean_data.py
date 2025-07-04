@@ -13,5 +13,5 @@ clean_data['photos'] = clean_data['photos'].where(clean_data['photos'] > 0, 0)
 # Conversion au format datetime
 clean_data['date'] = pd.to_datetime(clean_data['date'])
 
-print(clean_data)
+clean_data.to_csv('clean_data_exo4.csv', index=False)
 
