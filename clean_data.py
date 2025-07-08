@@ -1,5 +1,7 @@
 import pandas as pd
 
+    
+
 # Création d'une fonction 
 def load_and_clean_data(filename, new_filename):
     # Récupération du csv
