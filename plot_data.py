@@ -1,6 +1,6 @@
 import pandas as pd
 import plotly.express as px
-
+import os
 
 def plot_photos_by_weather(df_trips):
 # Chargement du document cible
@@ -17,7 +17,8 @@ def plot_photos_by_weather(df_trips):
                 title='Nombre moyen de photos selon la météo',
                 labels={'photos': 'Photos', 'weather': 'Météo' })
 
-  fig.show()
+  fig.write_html("graph.html", auto_open=False)
+  os.system('powershell.exe start graph.html')
 
 def plot_mood_distribution(df_trips):
   # Génération d'un graphique de répartition des humeurs
@@ -32,7 +33,8 @@ def plot_mood_distribution(df_trips):
               labels={'mood': 'Humeurs'}
               )
 
-  fig.show()
+  fig.write_html("graph.html", auto_open=False)
+  os.system('powershell.exe start graph.html')
 
 def plot_photo_by_date(df_trips):
   # Visualisation des photos prises dans le temps
@@ -47,4 +49,5 @@ def plot_photo_by_date(df_trips):
                 labels={'date': 'Date', 'photos': 'Nombre de photos'}
               )
 
-  fig.show()
+  fig.write_html("graph.html", auto_open=False)
+  os.system('powershell.exe start graph.html')
