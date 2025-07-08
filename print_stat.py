@@ -21,7 +21,6 @@ def print_statistics(filename):
     show_missing = df_trips.isna().sum()
     print(show_missing)
     # Affichage du nombre de valeur num erronée
-    show_error = df_trips['photos'].fillna
+    show_error = df_trips['photos'].fillna(0)
     print(show_error)
 
-print_statistics('clean_data_exo4.csv')
